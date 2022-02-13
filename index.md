@@ -12,14 +12,47 @@ Many mispronunciation detection and diagnosis (MD&D) research approaches try to 
 
 ## Phoneme Recognition
 ### Correctness and Accuracy
-| Models        | Correctness| Accuracy |
-|:--------------|:-----------:|:--------:|
-| Baseline-1    | 71.95%     | 70.25%  |
-| Baseline-2 (AL)| 73.21%     | 71.22%  |
-| PL-1          | 82.18%     | 80.47%  |
-| PL-2          | 81.11%     | 79.56%  |
-| APL-1         | 81.49%     | 79.65%  |
-| APL-2         | 84.85%     | 83.04%  |
+<table>
+<thead>
+  <tr>
+    <th>Models</th>
+    <th>Correctness</th>
+    <th>Accuracy</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Baseline-1</td>
+    <td>71.95%</td>
+    <td>70.25%</td>
+  </tr>
+  <tr>
+    <td>Baseline-2 (AL)</td>
+    <td>73.21%</td>
+    <td>71.22%</td>
+  </tr>
+  <tr>
+    <td>PL-1</td>
+    <td>82.18%</td>
+    <td>80.47%</td>
+  </tr>
+  <tr>
+    <td>PL-2</td>
+    <td>81.11%</td>
+    <td>79.56%</td>
+  </tr>
+  <tr>
+    <td>APL-1</td>
+    <td>81.49%</td>
+    <td>79.65%</td>
+  </tr>
+  <tr>
+    <td>APL-2</td>
+    <td>84.58%</td>
+    <td>83.04%</td>
+  </tr>
+</tbody>
+</table>
 
 ### Confusion Matrix
 
