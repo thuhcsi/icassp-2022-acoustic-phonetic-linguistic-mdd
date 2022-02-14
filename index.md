@@ -393,7 +393,7 @@ The confusion matrices of most frequently misrecognized vowels and consonants wi
 </tbody>
 </table>
 
-### Phonemes that APL Most Improve on (PL vs. APL)
+### Phonemes that APL Most Improves on (PL vs. APL)
 With taking acoustic features, the top 5 phonemes benefited are 'aa', 'jh', 'ao', 'ae' and 'uh', which get 21.24%, 14.29%, 12.14%, 10.30% and 10.24% relative improvements in accuracy, respectively. Most of them are vowels.
 
 ## Mispronunciation Detection and Diagnosis
