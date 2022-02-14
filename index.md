@@ -11,52 +11,11 @@ Many mispronunciation detection and diagnosis (MD&D) research approaches try to 
 # Experiments
 
 ## Phoneme Recognition
-### Correctness and Accuracy
-<table>
-<thead>
-  <tr>
-    <th>Models</th>
-    <th>Correctness</th>
-    <th>Accuracy</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Baseline-1</td>
-    <td>71.95%</td>
-    <td>70.25%</td>
-  </tr>
-  <tr>
-    <td>Baseline-2 (AL)</td>
-    <td>73.21%</td>
-    <td>71.22%</td>
-  </tr>
-  <tr>
-    <td>PL-1</td>
-    <td>82.18%</td>
-    <td>80.47%</td>
-  </tr>
-  <tr>
-    <td>PL-2</td>
-    <td>81.11%</td>
-    <td>79.56%</td>
-  </tr>
-  <tr>
-    <td>APL-1</td>
-    <td>81.49%</td>
-    <td>79.65%</td>
-  </tr>
-  <tr>
-    <td>APL-2</td>
-    <td>84.58%</td>
-    <td>83.04%</td>
-  </tr>
-</tbody>
-</table>
 
 ### Confusion Matrix
+The confusion matrices of most frequently misrecognized vowels and consonants with respect to baseline2 (AL), PL-2 and APL-2 are listed in Table 1 and Table 2 respectively. Almost all vowels and consonants presented in the tables are more accurately recognized when the acoustic features are replaced by the new phonetic embeddings. The APL-2 further improves performance.
 
-#### Confusion matrix of frequently misrecognized vowels
+#### Table 1: Confusion matrix of frequently misrecognized vowels
 
 <table>
 <thead>
@@ -245,7 +204,7 @@ Many mispronunciation detection and diagnosis (MD&D) research approaches try to 
 </tbody>
 </table>
 
-#### Confusion matrix of frequently misrecognized consonants
+#### Table 2: Confusion matrix of frequently misrecognized consonants
 
 <table>
 <thead>
@@ -435,88 +394,15 @@ Many mispronunciation detection and diagnosis (MD&D) research approaches try to 
 </table>
 
 ### Phonemes that APL Most Improve on (PL vs. APL)
-With taking acoustic features,  the top 5 phonemes benefited are 'aa',  'jh',  'ao',  'ae' and 'uh',  which get 21.24%, 14.29%, 12.14%, 10.30% and 10.24% relative improvements in accuracy, respectively.  Most of them are vowels.
+With taking acoustic features, the top 5 phonemes benefited are 'aa', 'jh', 'ao', 'ae' and 'uh', which get 21.24%, 14.29%, 12.14%, 10.30% and 10.24% relative improvements in accuracy, respectively. Most of them are vowels.
 
 ## Mispronunciation Detection and Diagnosis
-### Performance Accross Models
-<table>
-<thead>
-  <tr>
-    <th>Models</th>
-    <th>FRR</th>
-    <th>FAR</th>
-    <th>Detection Rate</th>
-    <th>Diagnosis Error Rate</th>
-    <th>Recall</th>
-    <th>Precision</th>
-    <th>F-measure</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Baseline-1</td>
-    <td>24.45%</td>
-    <td>24.81%</td>
-    <td>74.81%</td>
-    <td>44.14%</td>
-    <td>74.19%</td>
-    <td>34.70%</td>
-    <td>47.28%</td>
-  </tr>
-  <tr>
-    <td>Baseline-2 (AL)</td>
-    <td>24.19%</td>
-    <td>27.60%</td>
-    <td>75.66%</td>
-    <td>44.07%</td>
-    <td>72.40%</td>
-    <td>35.29%</td>
-    <td>47.45%</td>
-  </tr>
-  <tr>
-    <td>PL-1</td>
-    <td>12.12%</td>
-    <td>41.83%</td>
-    <td>83.31%</td>
-    <td>37.67%</td>
-    <td>58.17%</td>
-    <td>46.66%</td>
-    <td>51.78%</td>
-  </tr>
-  <tr>
-    <td>PL-2</td>
-    <td>13.55%</td>
-    <td>39.43%</td>
-    <td>82.63%</td>
-    <td>37.64%</td>
-    <td>60.57%</td>
-    <td>44.89%</td>
-    <td>51.57%</td>
-  </tr>
-  <tr>
-    <td>APL-1</td>
-    <td>13.57%</td>
-    <td>38.01%</td>
-    <td>82.84%</td>
-    <td>37.89%</td>
-    <td>61.99%</td>
-    <td>45.43%</td>
-    <td>52.44%</td>
-  </tr>
-  <tr>
-    <td>APL-2</td>
-    <td>8.88%</td>
-    <td>45.51%</td>
-    <td>85.59%</td>
-    <td>33.94%</td>
-    <td>54.49%</td>
-    <td>52.79%</td>
-    <td>53.62%</td>
-  </tr>
-</tbody>
-</table>
 
 ### Mispronunciations Hardest to Detect across Different Accents
+The top 3 challenge mispronunciations in APL-2 model of the six accents in the test set are shown in Table 3, in which each mispronunciation is represented in a tuple.  For example, (r, r*) indicates that 'r' is mispronounced with 'r*', and (\< eps\>, ax) stands for an insertion error. Since for each accent only one speaker is included in the testset, more data is needed to show a more robust trend across the six accents.
+
+#### Table 3: Top 3 challenging mispronunciations across accents
+
 <table>
 <thead>
   <tr>
@@ -551,5 +437,3 @@ With taking acoustic features,  the top 5 phonemes benefited are 'aa',  'jh',  '
   </tr>
 </tbody>
 </table>
-
-The top 3 challenge mispronunciations in APL-2 model of the six accents in the test set are show above, in which each mispronunciation is represented in a tuple.  For example, (r, r*) indicates that 'r' is mispronounced with 'r*', and (\< eps\>, ax) stands for an insertion error.  Since for each accent only one speaker is included in the testset, more data is needed to show a more robust trend across the six accents.
